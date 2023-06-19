@@ -58,19 +58,21 @@ const Contact = () => {
         </div>
         <div className="reel-container contact-video">
          <div className="video">
-         <ReactPlayer
+         {/* <ReactPlayer
          className="react-player"
-            url='https://conniviatechlaxman.wistia.com/medias/bx2lboaxcq'
+            url='https://vimeo.com/837312727'
             playing
             ref={videoRef}
             muted={isMute}
-            // onClick={handleVideoClick}
+            loop={true} */}
+            {/* // onClick={handleVideoClick}
             controls={false}
-          />
+          /> */}
+          <iframe src="https://player.vimeo.com/video/837312727?h=0f78389d9e&autoplay=1&loop=1&title=0&byline=0&portrait=0" style={{width:"100%",height:"100%" , border:0}} allow="autoplay; fullscreen; picture-in-picture"></iframe>
          </div>
-          <button onClick={handleMute} className="player-volume">
+          {/* <button onClick={handleMute} className="player-volume">
             {isMute ? <IoVolumeMuteSharp /> : <FaVolumeUp />}
-          </button>
+          </button> */}
         </div>
       </div>
     </section>

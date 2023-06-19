@@ -85,8 +85,8 @@ body {
   background-image: url(./Images/noise.gif);
 }
 
-.char{
-  transform: translateY(120px);
+.word{
+  transform: translateY(150px);
   transition: transform 0.5s ;
 }
 
@@ -428,7 +428,7 @@ body {
 
 .video-container {
   width: 1100px !important;
-  height: 70vh;
+  height: 65vh;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -482,6 +482,8 @@ body {
 
   background-repeat: no-repeat;
   background-size: 20px 20px;
+  opacity: 0;
+  transform: translateY(50px);
 }
 
 .logo {
@@ -500,6 +502,8 @@ body {
   margin-right: 10px;
   color: var(--text-color);
   font-size: 30px;
+  opacity: 0;
+  transform: translateY(50px);
 }
 
 .theme-background:hover {
@@ -513,6 +517,8 @@ body {
 
 .lt {
   padding-left: 10px;
+  opacity: 0;
+  transform: translateY(50px);
 }
 
 .lt div > span {
@@ -571,9 +577,11 @@ font-family: 'Poppins', sans-serif;
 
 .hero-image-container {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   width: 40%;
+  height: 100%;
+
 }
 
 .text-container {
@@ -597,7 +605,7 @@ font-family: 'Poppins', sans-serif;
   letter-spacing: 5px;
 }
 
-.batman-font:hover .char {
+.batman-font:hover .word {
   background-image: linear-gradient(
     to right,
     #f6be00,
@@ -618,7 +626,7 @@ font-family: 'Poppins', sans-serif;
   cursor: pointer;
 }
 
-.rainbow-text:hover .char{
+.rainbow-text:hover .word{
   background-image: linear-gradient(
     to right,
     #f6be00,
@@ -639,7 +647,7 @@ font-family: 'Poppins', sans-serif;
   cursor: pointer;
 }
 
-.contact-rainbow-text:hover{
+.contact-rainbow-text:hover , .faq-heading:hover{
   background-image: linear-gradient(
     to right,
     #f6be00,
@@ -803,6 +811,7 @@ font-family: 'Poppins', sans-serif;
   background: linear-gradient(to right, var(--camera-border-color) 2px, transparent 1px) 0 0, linear-gradient(to right, var(--camera-border-color) 2px, transparent 2px) 0 100%, linear-gradient(to left, var(--camera-border-color) 2px, transparent 2px) 100% 0, linear-gradient(to left, var(--camera-border-color) 2px, transparent 2px) 100% 100%, linear-gradient(to bottom, var(--camera-border-color) 2px, transparent 2px) 0 0, linear-gradient(to bottom, var(--camera-border-color) 2px, transparent 2px) 100% 0, linear-gradient(to top, var(--camera-border-color) 2px, transparent 2px) 0 100%, linear-gradient(to top, var(--camera-border-color) 2px, transparent 2px) 100% 100%;
   background-repeat: no-repeat;
   background-size: 10px 10px;
+  opacity: 0;
 }
 
 .text-container .hero-text-italic-container .play-btn:hover {
@@ -821,6 +830,8 @@ font-family: 'Poppins', sans-serif;
   background-color: var(--text-slider-bg);
   border-radius: 5px;
   text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
 }
 
 .slider-text-container h2 {
@@ -849,6 +860,8 @@ font-family: 'Poppins', sans-serif;
 .social-container .social {
   padding-right: 15px;
   list-style: none;
+  opacity: 0;
+  transform: translateY(50px);
 }
 
 .social-container .social a {
@@ -887,12 +900,14 @@ font-family: 'Poppins', sans-serif;
 }
 
 .hero-image {
-  width: 70%;
+  width: 100%;
 }
 
 .hero-image .card {
   width: 100%;
   position: relative;
+  opacity: 0;
+  transform: translateY(50px);
 }
 
 .hero-image .card::before {
@@ -952,6 +967,8 @@ font-family: 'Poppins', sans-serif;
   width: 33%;
   padding: 20px;
   margin-top: 35px;
+  opacity: 0;
+  transform: translateY(120px);
 }
 
 .services-container .row .service-container .service {
@@ -971,9 +988,94 @@ font-family: 'Poppins', sans-serif;
 
 .services-container .row .service-container .service.dark-border:hover {
   border: 2px solid;
-  animation: color-rotate 2s infinite linear;
+  border-image: linear-gradient(
+    to right,
+    #f6be00,
+    #97d700,
+    #00ab84,
+    #00a3e0,
+    #5461c8,
+    #c724b1,
+    #e4002b,
+    #ff6900
+  )
+  1;
+  border-radius: 10px;
+  animation: service-border-animation 2s infinite linear;
 }
 
+@keyframes service-border-animation {
+  0% {
+    border: 2px solid;
+    border-image: linear-gradient(
+        to right,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet
+      )
+      1;
+  }
+  25% {
+    border: 2px solid;
+    border-image: linear-gradient(
+        to right,
+        violet,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo
+      )
+      1;
+  }
+  50% {
+    border: 2px solid;
+    border-image: linear-gradient(
+        to right,
+        indigo,
+        violet,
+        red,
+        orange,
+        yellow,
+        green,
+        blue
+      )
+      1;
+  }
+  75% {
+    border: 2px solid;
+    border-image: linear-gradient(
+        to right,
+        blue,
+        indigo,
+        violet,
+        red,
+        orange,
+        yellow,
+        green
+      )
+      1;
+  }
+  100% {
+    border: 2px solid;
+    border-image: linear-gradient(
+        to right,
+        green,
+        blue,
+        indigo,
+        violet,
+        red,
+        orange,
+        yellow
+      )
+      1;
+  }
+}
 .services-container .row .service-container .service .icon {
   margin: 10px 0;
 }
@@ -1143,7 +1245,7 @@ font-family: 'Poppins', sans-serif;
   box-shadow: var(--shadow);
   border-radius: 10px;
   /* max-width: 100%; */
-  height: 400px;
+  height: 309px;
 }
 
 .reel-container .video .react-player {
@@ -1805,6 +1907,15 @@ height: 60vh;
   .slider-text-container h2 {
     font-size: 36px;
 }
+
+h2.immersive-tech {
+  font-size: 30px;
+}
+
+.reel-container .video {
+  height: 400px;
+}
+
 }
 
 @media screen and (max-width: 1366px) and (max-height: 768px){
@@ -1891,6 +2002,7 @@ height: 60vh;
     background-color: var(--client-background);
     padding: 20px;
     border-radius: 10px;
+    height: 55vh;
 }
   .navbar {
     padding: 0px 15px;
@@ -1911,6 +2023,11 @@ height: 60vh;
 .slider-text-container .immersive-tech {
   font-size: 25px;
 }
+
+.slider-text-container .motion-graphics {
+  font-size: 30px;
+}
+
 .hero-image .card::before {
   width: 370px;
   height: 250px;
@@ -1943,6 +2060,10 @@ height: 60vh;
 }
 #contact {
   padding: 80px 40px;
+}
+
+.reel-container .video {
+  height: 265px;
 }
 .contact-info h5, .contact-info h6 {
   font-size: 3.5rem;
@@ -2047,7 +2168,7 @@ height: 60vh;
 
 .video-container.video {
   width: 630px !important;
-height: 60vh;
+height: 37vh;
 }
 
 .reel-container {
@@ -2389,8 +2510,8 @@ height: 60vh;
   }
 
   .video-container.video {
-    width: 390px !important;
-    height: 40vh;
+    width: 350px !important;
+    height: 21vh;
     padding: 10px;
 }
 
@@ -2434,7 +2555,7 @@ height: 60vh;
 
   .reel-container .video {
     height: 270px;
-    padding: 15px;
+    padding: 10px;
 }
 
   .faqs-section {

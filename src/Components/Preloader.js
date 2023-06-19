@@ -2,10 +2,10 @@ import React from "react";
 const Preloader = () => {
   return (
     <div className="border-animation">
-      <div class="cube">
-        <div class="face front"> </div> <div class="face back"> </div>
-        <div class="face right"> </div> <div class="face left"> </div>
-        <div class="face top"> </div> <div class="face bottom"> </div>
+      <div className="cube">
+        <div className="face front"> </div> <div className="face back"> </div>
+        <div className="face right"> </div> <div className="face left"> </div>
+        <div className="face top"> </div> <div className="face bottom"> </div>
       </div>
     </div>
   );

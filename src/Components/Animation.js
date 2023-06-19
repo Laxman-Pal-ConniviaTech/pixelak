@@ -12,48 +12,37 @@ const Animation = (props) => {
     const sectionHeading = new SplitType(".section-heading");
     const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
 
-    tl.fromTo(
+    tl.to(
       ".theme-background",
-      {
-        opacity: 0,
-        y: 50,
-      },
       {
         opacity: 1,
         y: 0,
         duration: 0.2,
-        delay: 1,
       }
     )
-      .fromTo(
+      .to(
         ".logo-container",
-        {
-          opacity: 0,
-          y: 50,
-        },
         {
           opacity: 1,
           y: 0,
           duration: 0.2,
         }
       )
-      .fromTo(".lt", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.3 })
+      .to(".lt", { opacity: 1, y: 0, duration: 0.3 })
 
-      tl.to(".text-container .char", {
+      tl.to(".text-container .word", {
         y: 0,
-        stagger: 0.02,
+        stagger: 0.1,
         duration: 0.2,
       })
-        .fromTo(".play-btn", { opacity: 0 }, { opacity: 1, duration: 1 })
-        .fromTo(
+        .to(".play-btn", { opacity: 1, duration: 1 })
+        .to(
           [".slider-text-container", ".card"],
-          { opacity: 0, y: 50 },
           { opacity: 1, y: 0 },
           "-=1"
         )
-    .fromTo(
+    .to(
       ".social",
-      { opacity: 0, y: 50 },
       {
         opacity: 1,
         y: 0,
@@ -63,9 +52,8 @@ const Animation = (props) => {
       }
     )
 
-    gsap.fromTo(
+    gsap.to(
       ".service-container",
-      { opacity: 0, y: 120 },
       {
         scrollTrigger: {
           trigger: ".section-heading",
@@ -78,24 +66,24 @@ const Animation = (props) => {
       }
     );
 
-    gsap.to("#services .char", {
+    gsap.to("#services .word", {
       scrollTrigger: {
         trigger: "#services",
         start: " 70% 30%",
       },
       y: 0,
-      stagger: 0.02,
+      stagger: 0.1,
       delay: 0.1,
       duration: 0.1,
     });
 
-    tl.to("#clients .char", {
+    tl.to("#clients .word", {
       scrollTrigger: {
         trigger: "#clients",
         start: " 70% 30%",
       },
       y: 0,
-      stagger: 0.05,
+      stagger: 0.1,
       delay: 0.1,
       duration: 0.1,
     }).fromTo(

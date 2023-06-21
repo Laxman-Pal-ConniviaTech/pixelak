@@ -55,7 +55,7 @@ const Services = () => {
               <div className="icon">
                 <Event className="service-icons" />
               </div>
-              <h5 className="">ATL BTL</h5>
+              <h5 className="">ATL, BTL, TTL</h5>
               <p>
                 TV ads engage audiences, enhance digital presence, and portray
                 captivating experiences and company culture.

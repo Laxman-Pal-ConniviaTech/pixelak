@@ -25,7 +25,7 @@ const Social = () => {
           </a>
         </li>
         <li className="social vimeo">
-          <a href="#">
+          <a href="https://vimeo.com/user115128453">
             <BsVimeo />
           </a>
         </li>

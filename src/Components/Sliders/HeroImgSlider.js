@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import Slider from "react-slick";
-import img1 from "../../Images/hero-img-1.png";
-import img2 from "../../Images/hero-img-2.png";
-import img3 from "../../Images/hero-img-3.png";
-import img4 from "../../Images/hero-img-4.png";
-import img5 from "../../Images/hero-img-5.png";
+import img1 from "../../Images/1.png";
+import img2 from "../../Images/2.png";
+import img3 from "../../Images/3.png";
+import img4 from "../../Images/4.png";
+import img5 from "../../Images/5.png";
 
 const HeroImgSlider = (props) => {
   const settings = {

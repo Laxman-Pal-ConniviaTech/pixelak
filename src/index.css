@@ -397,21 +397,6 @@ body {
   }
 }
 
-.line-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  overflow: hidden;
-}
-
-.line-container svg {
-  display: inline-block;
-  height: 100%;
-}
-
 /* Video Moadal */
 
 .backdrop {
@@ -571,7 +556,7 @@ font-family: 'Poppins', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60%;
+  width: 50%;
   height: 100%;
 }
 
@@ -579,7 +564,7 @@ font-family: 'Poppins', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40%;
+  width: 50%;
   height: 100%;
 
 }
@@ -925,7 +910,9 @@ font-family: 'Poppins', sans-serif;
 }
 
 .hero-image .card .hero-img {
-  width: 100%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-image:hover .hero-img {
